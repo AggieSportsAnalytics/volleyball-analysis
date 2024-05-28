@@ -11,6 +11,8 @@ const App = () => {
             <Routes>
                 <Route index element={<HomePage/>} />
                 <Route path="team-selection" element={<TeamSelection/>} />
+                <Route path="stat-dashboard" element={<StatDashboard/>} />
+                
             </Routes>
         </BrowserRouter>
     );

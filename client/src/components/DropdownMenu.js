@@ -2,12 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
-function TeamDropdown(){
+function DropdownMenu({onSelect}){
     const [yearDropdown, setYearDropdown] = useState('');
     const [showTeamDropdown, setShowTeamDropdown] = useState(false);
     const [teamDropdown, setTeamDropdown] = useState('');
     const [schools, setSchools] = useState([]);
-    const [showDashboardButton, setShowDashboardButton] = useState(false);
 
     const handleYearDropdown = (event) => {
         setYearDropdown(event.target.value);
@@ -16,7 +15,7 @@ function TeamDropdown(){
 
     const handleTeamDropdown = (event) => {
         setTeamDropdown(event.target.value);
-        setShowDashboardButton(true);
+        onSelect([yearDropdown, event.target.value]);
     }
 
     useEffect(() => {
@@ -53,13 +52,8 @@ function TeamDropdown(){
                 )}
             </div>
 
-            {showDashboardButton && (
-                <Link to="/">
-                    <button>Go to team selection</button>
-                </Link>
-            )}
         </>
     )
 }
 
-export default TeamDropdown;
+export default DropdownMenu;

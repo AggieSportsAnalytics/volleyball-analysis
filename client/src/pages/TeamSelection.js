@@ -1,12 +1,31 @@
 import React from 'react';
+import { useState } from 'react';
 import TeamSelectionComponent from '../components/TeamSelection';
-import TeamDropdown from '../components/TeamDropdown';
+import DropdownMenu from '../components/DropdownMenu';
+import {Link} from 'react-router-dom'
 
 const TeamSelection = () => {
+  const [team1, setTeam1] = useState([])
+  const [team2, setTeam2] = useState([])
+
+  const handleSetTeam1 = (value) => {
+    setTeam1(value)
+  }
+  
+  const handleSetTeam2 = (value) => {
+    setTeam2(value)
+  }
+
     return (
         <div>
             <TeamSelectionComponent />
-            <TeamDropdown />
+            <DropdownMenu onSelect={handleSetTeam1}/>
+            <DropdownMenu onSelect={handleSetTeam2}/>
+            {team1.length !== 0 && team2.length !== 0 && (
+              <Link to="/stat-dashboard">
+                <button> Go to stats dashboard</button>
+              </Link>
+            )}
         </div>
     );
 };
