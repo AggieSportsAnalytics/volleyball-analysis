@@ -4,7 +4,7 @@ import TeamSelectionComponent from '../components/TeamSelection';
 import DropdownMenu from '../components/DropdownMenu';
 import {Link} from 'react-router-dom'
 
-const TeamSelection = () => {
+const TeamSelection = (props) => {
   const [team1, setTeam1] = useState([])
   const [team2, setTeam2] = useState([])
 
@@ -22,9 +22,9 @@ const TeamSelection = () => {
             <DropdownMenu onSelect={handleSetTeam1}/>
             <DropdownMenu onSelect={handleSetTeam2}/>
             {team1.length !== 0 && team2.length !== 0 && (
-              <Link to="/stat-dashboard">
-                <button> Go to stats dashboard</button>
-              </Link>
+              <Link to="/stat-dashboard" state={{matchup: team1.concat(team2)}}>
+              <button>Go to stats dashboard</button>
+            </Link>
             )}
         </div>
     );

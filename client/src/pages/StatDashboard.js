@@ -1,7 +1,12 @@
 import React from 'react';
 import StatDashboardComponent from '../components/StatDashboard';
+import { useLocation } from 'react-router-dom';
 
-const StatDashboard = () => {
+function StatDashboard(props){
+    const { state } = useLocation();
+
+    console.log(state['matchup'])
+
     return (
         <div>
             <StatDashboardComponent />
