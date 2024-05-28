@@ -4,4 +4,4 @@ function RankingBox({category, numTeams}){
     
 }
 
-export default RankingBox
+export default RankingBox;
