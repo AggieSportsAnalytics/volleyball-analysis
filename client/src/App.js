@@ -4,12 +4,14 @@ import HomePage from './pages/HomePage';
 import TeamSelection from './pages/TeamSelection';
 import StatDashboard from './pages/StatDashboard';
 import MatchupPage from './pages/MatchupPage';
+import RankingPage from './pages/RankingPage';
 
 const App = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route index element={<HomePage/>} />
+                <Route path="rankings" element={<RankingPage/>} />
                 <Route path="team-selection" element={<TeamSelection/>} />
                 <Route path="stat-dashboard" element={<StatDashboard/>} />
                 
