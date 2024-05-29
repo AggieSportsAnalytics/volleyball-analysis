@@ -23,8 +23,8 @@ const TeamSelection = (props) => {
             <DropdownMenu onSelect={handleSetTeam2}/>
             {team1.length !== 0 && team2.length !== 0 && (
               <Link to="/stat-dashboard" state={{matchup: team1.concat(team2)}}>
-              <button>Go to stats dashboard</button>
-            </Link>
+                <button>Go to stats dashboard</button>
+              </Link>
             )}
         </div>
     );

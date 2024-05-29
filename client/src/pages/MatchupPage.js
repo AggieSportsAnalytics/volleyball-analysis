@@ -1,12 +1,11 @@
 import React from 'react';
-import StatDashboardComponent from '../components/StatDashboard';
 
-const StatDashboard = () => {
+function MatchupPage(props){
     return (
-        <div>
-            <StatDashboardComponent />
-        </div>
-    );
-};
+        <>
+        <h1>Matchup Page</h1>
+        </>
+    )
+}
 
-export default StatDashboard;
+export default MatchupPage;

@@ -12,6 +12,7 @@ const App = () => {
                 <Route index element={<HomePage/>} />
                 <Route path="team-selection" element={<TeamSelection/>} />
                 <Route path="stat-dashboard" element={<StatDashboard/>} />
+                <Route path="matchup" element={<MatchupPage/>} />
                 
             </Routes>
         </BrowserRouter>

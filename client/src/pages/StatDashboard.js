@@ -1,6 +1,6 @@
 import React from 'react';
 import StatDashboardComponent from '../components/StatDashboard';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function StatDashboard(props){
@@ -72,6 +72,11 @@ function StatDashboard(props){
                     ))}
                 </tbody>
             </table>
+            )}
+            {Object.keys(data).length === 1 && (
+                <Link to="/matchup" state={ state }>
+                    <button>View Matchup</button>
+                </Link>
             )}
         </>
     );
