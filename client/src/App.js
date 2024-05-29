@@ -6,6 +6,7 @@ import StatDashboard from './pages/StatDashboard';
 import MatchupPage from './pages/MatchupPage';
 import RankingPage from './pages/RankingPage';
 import AboutPage from './pages/AboutPage';
+import './App.css'
 
 const App = () => {
     return (
