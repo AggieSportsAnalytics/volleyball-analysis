@@ -39,9 +39,9 @@ def get_rankings():
     with open('data/rankings.json', 'r') as f:
         rankings = json.load(f)
     
-    print(year, param)
+    
 
-    return {'rankings': rankings[year][param]}
+    return {'rankings': rankings[year][param][0:10]}
 
         
 

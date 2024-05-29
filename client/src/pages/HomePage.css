@@ -1,3 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
 .home-container {
     display: flex;
     flex-direction: column;
@@ -13,32 +21,32 @@
   }
   
   .home-content {
-    z-index: 1; /* Ensures content is above background */
+    z-index: 1;
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align items */
+    align-items: center;
   }
   
   .home-title {
-    font-size: 8rem; /* Adjust size as needed */
+    font-size: 10rem;
     color: #ca9df8;
     margin-bottom: 20px;
     font-family: Wallpoet;
   }
   
   .home-logo {
-    margin: 20px 0; /* Space between the logo and title/button */
+    margin: 20px 0;
   }
   
   .start-button {
-    font-size: 2rem; /* Adjust size as needed */
+    font-size: 2rem; 
     font-family: Wallpoet;
     color: #1f1f1f;
     padding: 15px 100px;
     border: none;
-    border-radius: 25px; /* Rounded edges */
-    background-color: #d8d3de; /* Button background color */
+    border-radius: 25px;
+    background-color: #d8d3de;
     cursor: pointer;
     margin-bottom: -40px;
     margin-top: 80px;
@@ -46,41 +54,57 @@
   }
   
   .start-button:hover {
-    background-color: #b48be6; /* Darker shade on hover */
+    background-color: #b48be6;
   }
 
-  .home-background {
+.home-background {
     position: absolute;
-    top: 0;
-    left: 60px;
-    width: 100%;
-    height: 100%;
-    z-index: 0; /* Ensures background is behind content */
-  }
+    margin: 0 auto;
 
-  .home-nav-bar {
+    svg{
+        width: 100%;
+        height: 100%;
+        transform: scale(0.97);
+    
+    }
+} 
+
+.home-nav-bar {
     display: flex;
-    justify-content: flex-end; /* Align links to the end (right) */
+    justify-content: center; /* Center the nav links horizontally */
     align-items: center;
-    padding: 40px; /* Adjust padding as needed */
+    padding: 20px; /* Adjust padding as needed */
     position: absolute;
-    top: 0;
-    right: 0; /* Align to the right */
-    width: auto; /* Adjust width as needed */
-  }
-  
-  .nav-link {
+    top: 20px;
+    width: 100%; /* Ensure the navbar spans the full width */
+}
+
+.nav-link {
     color: #ca9df8; /* Purple color */
     text-decoration: none; /* Remove underline */
     font-size: 1.5rem; /* Increase font size */
-    margin-left: 80px; /* Space between links */
+    margin: 0 40px; /* Space between links */
     transition: all 0.3s ease;
     font-family: Wallpoet;
-  }
-  
-  .nav-link:hover {
+    z-index: 2;
+}
+
+.nav-link:hover {
     color: #b48be6; /* Darker shade on hover */
     transform: scale(1.15);
-  }
-  
+}
+
+.spinner {
+    animation: spin 40s linear infinite; /* Apply the animation */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
   

@@ -16,9 +16,9 @@ const HomePage = () => {
           <button className='start-button'>START</button>
         </Link>
       </div>
-      {/* <div className='home-background'>
+      <div className='home-background'>
         <HomeBackground />
-      </div> */}
+      </div>
     </div>
   );
 };

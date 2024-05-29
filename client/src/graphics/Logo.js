@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Logo = () => (
-    <svg width="400" height="300" viewBox="0 0 506 496" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className='spinner-container'>
+    <svg className='spinner' width="400" height="300" viewBox="0 0 506 496" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="59" cy="376" r="10" fill="#60576A" />
         <circle cx="99" cy="449" r="10" fill="#A584C5" />
         <circle cx="427" cy="89" r="10" fill="#A584C5" />
@@ -109,6 +110,7 @@ const Logo = () => (
             </linearGradient>
         </defs>
     </svg>
+    </div>
 );
 
 export default Logo;

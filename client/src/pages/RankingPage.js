@@ -1,10 +1,11 @@
 import React from 'react';
 import RankingDropdown from '../components/RankingDropdown';
+import './RankingPage.css'
+
 
 function RankingPage(){
     return (
         <>
-        <h1>Rankings</h1>
         <RankingDropdown />
         </>
     )
