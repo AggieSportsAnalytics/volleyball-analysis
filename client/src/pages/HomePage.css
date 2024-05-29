@@ -18,6 +18,19 @@ html, body {
     background-color: #1f1f1f;
     padding: 0;
     margin: 0;
+
+    .home-background {
+      position: absolute;
+      margin: 0 auto;
+  
+      svg{
+          width: 100%;
+          height: 100%;
+          transform: scale(0.97);
+      
+      }
+    } 
+  
   }
   
   .home-content {
@@ -57,17 +70,6 @@ html, body {
     background-color: #b48be6;
   }
 
-.home-background {
-    position: absolute;
-    margin: 0 auto;
-
-    svg{
-        width: 100%;
-        height: 100%;
-        transform: scale(0.97);
-    
-    }
-} 
 
 .home-nav-bar {
     display: flex;
@@ -95,7 +97,7 @@ html, body {
 }
 
 .spinner {
-    animation: spin 40s linear infinite; /* Apply the animation */
+    animation: spin 40s linear infinite;
 }
 
 @keyframes spin {

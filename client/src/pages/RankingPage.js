@@ -3,10 +3,12 @@ import RankingDropdown from '../components/RankingDropdown';
 import './RankingPage.css'
 
 
+
 function RankingPage(){
     return (
         <>
         <RankingDropdown />
+
         </>
     )
 }
