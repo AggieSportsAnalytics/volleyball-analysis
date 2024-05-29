@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage';
 import TeamSelection from './pages/TeamSelection';
 import StatDashboard from './pages/StatDashboard';
 import MatchupPage from './pages/MatchupPage';
+import RankingPage from './pages/RankingPage';
+import AboutPage from './pages/AboutPage';
 
 const App = () => {
     return (
@@ -13,6 +15,8 @@ const App = () => {
                 <Route path="team-selection" element={<TeamSelection/>} />
                 <Route path="stat-dashboard" element={<StatDashboard/>} />
                 <Route path="matchup" element={<MatchupPage/>} />
+                <Route path="rankings" element={<RankingPage/>} />
+                <Route path="about" element={<AboutPage/>} />
                 
             </Routes>
         </BrowserRouter>

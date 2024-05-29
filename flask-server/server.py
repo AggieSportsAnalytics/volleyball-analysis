@@ -29,12 +29,8 @@ def get_rosters():
     with open('data/rosters.json', 'r') as f:
         rosters = json.load(f)
     
-    print(rosters[year_a][team_a])
-    
     return {'rosters': [rosters[year_a][team_a], rosters[year_b][team_b]]}
         
-    
-
 
 if __name__ == '__main__':
     app.run(debug=True, port=8001)
