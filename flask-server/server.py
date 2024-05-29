@@ -30,6 +30,19 @@ def get_rosters():
         rosters = json.load(f)
     
     return {'rosters': [rosters[year_a][team_a], rosters[year_b][team_b]]}
+
+@app.route('/get_rankings')
+def get_rankings():
+    year = request.args.get('year')
+    param = request.args.get('param')
+
+    with open('data/rankings.json', 'r') as f:
+        rankings = json.load(f)
+    
+    print(year, param)
+
+    return {'rankings': rankings[year][param]}
+
         
 
 if __name__ == '__main__':
