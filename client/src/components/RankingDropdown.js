@@ -68,9 +68,9 @@ function RankingDropdown() {
                             <tbody>
                                 {rankings.map((ranking, index) => (
                                     <tr key={index}>
-                                        <td>{index + 1}</td> {/* Rank is the index + 1 */}
-                                        <td>{ranking[1]}</td> {/* Team */}
-                                        <td>{ranking[0]}</td> {/* Value */}
+                                        <td>{index + 1}</td> 
+                                        <td>{ranking[1]}</td>
+                                        <td>{ranking[0]}</td>
                                     </tr>
                                 ))}
                             </tbody>

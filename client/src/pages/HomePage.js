@@ -19,6 +19,7 @@ const HomePage = () => {
       </div>
       <div className='outline-shape'>
         <HomeBackground />
+        <HomeBackground id='-b2'/>
       </div>
     </div>
   );

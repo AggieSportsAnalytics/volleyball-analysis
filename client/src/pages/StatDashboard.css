@@ -1,47 +1,56 @@
-.dashboard-container{
-    background-color: #2c2b2b;;
+.dashboard-container {
+    background-color: #2c2b2b;
     width: 100%;
     height: 100%;
     overflow: auto;
+}
 
-    h1{
-        font-size: 3em;
-        color: #ca9df8;
-        font-family: Wallpoet;
-        padding-left: 3rem;
-        padding-top: 2rem; 
+.dashboard-container h1 {
+    font-size: 3em;
+    color: #ca9df8;
+    font-family: Wallpoet;
+    padding-left: 3rem;
+    padding-top: 2rem; 
+}
 
-    }
+.dashboard-container h2 {
+    font-size: 2rem;
+    color: #ca9df8;
+    font-family: Wallpoet;
+    padding-left: 3rem;
+    margin-top: 2rem;
+}
 
-    h2{
-        font-size: 2rem;
-        color: #ca9df8;
-        font-family: Wallpoet;
-        padding-left: 3rem;
-        margin-top: 2rem;
-    }
+.dashboard-dropdown-container {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    margin-right: auto;
+    /* border: 2px solid red; */
+    width: 80%;
+    margin-bottom: 2rem;
+}
 
-    .dasboard-dropdown-container{
-        padding-left: 10rem;
-        padding-top: 1rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.dashboard-flex{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid green; */
+}
 
+.link-dashboard{
+    width: 20%;
+    margin: auto;
+    padding-left: 6rem;
 }
 
 .dashboard-table-container {
     padding-top: 1rem;
-
-
 }
 
 .dashboard-table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
     font-size: 1rem;
-    margin-left: 2rem;
     font-family: Chakra Petch;
 }
 
@@ -50,27 +59,29 @@
     border: 1px solid white;
     text-align: center;
     color: white;
+    cursor: pointer;
 }
 
 .dashboard-table th {
     background-color: #989898;
 }
 
-.matchup-button{
-    font-size: 1.5rem; 
-        font-family: Wallpoet;
-        color: #1f1f1f;
-        padding: 15px 15px;
-        border: none;
-        border-radius: 25px;
-        background-color: #d8d3de;
-        cursor: pointer;
+.dashboard-table .sorted-column {
+    background-color: green !important;
+}
 
-        margin-top: 10rem;
-        margin-left: 30rem;
-        transition: background-color 0.3s ease;
-    }
-      
-    .matchup-button:hover {
+.matchup-button {
+    font-size: 1.5rem;
+    font-family: Wallpoet;
+    color: #1f1f1f;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #d8d3de;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.matchup-button:hover {
     background-color: #b48be6;
 }

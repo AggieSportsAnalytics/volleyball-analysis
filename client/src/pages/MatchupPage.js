@@ -3,7 +3,7 @@ import React from 'react';
 function MatchupPage(props){
     return (
         <>
-        <h1>Matchup Page</h1>
+        <h1>View Matchup</h1>
         </>
     )
 }
