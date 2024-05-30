@@ -12,7 +12,7 @@ const Logo = () => (
         <circle cx="231" cy="461" r="10" fill="#4E3963" />
         <path d="M447.213 245.083C447.213 352.271 360.319 439.165 253.13 439.165C145.942 439.165 59.0479 352.271 59.0479 245.083C59.0479 137.894 145.942 51 253.13 51C360.319 51 447.213 137.894 447.213 245.083Z" fill="url(#paint0_linear_40_687)" />
         <path d="M447.213 245.083C447.213 352.271 360.319 439.165 253.13 439.165C145.942 439.165 59.0479 352.271 59.0479 245.083C59.0479 137.894 145.942 51 253.13 51C360.319 51 447.213 137.894 447.213 245.083Z" stroke="black" />
-        <path d="M347.34 291.93V422.176" stroke="#1F1F1F" stroke-width="26" />
+        <path d="M347.34 291.93V422.176" stroke="#1F1F1F" strokeWidth="26" />
         <rect x="403.969" y="249.206" width="4.64981" height="4.64981" transform="rotate(-19.4588 403.969 249.206)" fill="#766885" />
         <rect x="365.873" y="249.206" width="4.64981" height="4.64981" transform="rotate(-19.4588 365.873 249.206)" fill="#CA9EF7" />
         <rect x="355.577" y="234.791" width="4.64981" height="4.64981" transform="rotate(-19.4588 355.577 234.791)" fill="#653694" />
@@ -24,7 +24,7 @@ const Logo = () => (
         <rect x="282.475" y="295.61" width="7.95611" height="7.95611" transform="rotate(-19.4588 282.475 295.61)" fill="#CA9EF7" />
         <rect x="291.741" y="292.521" width="7.95611" height="7.95611" transform="rotate(-19.4588 291.741 292.521)" fill="#CA9EF7" />
         <rect x="301.008" y="289.432" width="7.95611" height="7.95611" transform="rotate(-19.4588 301.008 289.432)" fill="#653694" />
-        <rect x="310.274" y="286.343" width="7.95611" height="7.95611" transform="rotate(-19.4588 310.274 286.343)" fill="#CAD8D3" fill-opacity="0.866667" />
+        <rect x="310.274" y="286.343" width="7.95611" height="7.95611" transform="rotate(-19.4588 310.274 286.343)" fill="#CAD8D3" fillOpacity="0.866667" />
         <rect x="319.541" y="283.255" width="7.95611" height="7.95611" transform="rotate(-19.4588 319.541 283.255)" fill="#CA9EF7" />
         <rect x="328.807" y="280.166" width="7.95611" height="7.95611" transform="rotate(-19.4588 328.807 280.166)" fill="#CA9EF7" />
         <rect x="338.073" y="277.077" width="7.95611" height="7.95611" transform="rotate(-19.4588 338.073 277.077)" fill="#AF7CE3" />
@@ -77,7 +77,7 @@ const Logo = () => (
         <rect x="319.541" y="255.455" width="7.95611" height="7.95611" transform="rotate(-19.4588 319.541 255.455)" fill="#CA9EF7" />
         <rect x="328.807" y="252.366" width="7.95611" height="7.95611" transform="rotate(-19.4588 328.807 252.366)" fill="#CA9EF7" />
         <rect x="338.073" y="249.277" width="7.95611" height="7.95611" transform="rotate(-19.4588 338.073 249.277)" fill="#CA9EF7" />
-        <rect x="270.119" y="262.662" width="7.95611" height="7.95611" transform="rotate(-19.4588 270.119 262.662)" fill="#766885" fill-opacity="0.937255" />
+        <rect x="270.119" y="262.662" width="7.95611" height="7.95611" transform="rotate(-19.4588 270.119 262.662)" fill="#766885" fillOpacity="0.937255" />
         <rect x="279.386" y="259.573" width="7.95611" height="7.95611" transform="rotate(-19.4588 279.386 259.573)" fill="#CA9EF7" />
         <rect x="288.652" y="256.485" width="7.95611" height="7.95611" transform="rotate(-19.4588 288.652 256.485)" fill="#914AD9" />
         <rect x="297.919" y="253.396" width="7.95611" height="7.95611" transform="rotate(-19.4588 297.919 253.396)" fill="#CA9EF7" />
@@ -85,17 +85,17 @@ const Logo = () => (
         <rect x="316.452" y="247.218" width="7.95611" height="7.95611" transform="rotate(-19.4588 316.452 247.218)" fill="#CA9EF7" />
         <rect x="325.719" y="244.129" width="7.95611" height="7.95611" transform="rotate(-19.4588 325.719 244.129)" fill="#D8D3DD" />
         <rect x="334.985" y="241.04" width="7.95611" height="7.95611" transform="rotate(-19.4588 334.985 241.04)" fill="#AF7CE3" />
-        <path d="M146.05 58.2073L307.185 154.316M307.185 154.316L365.358 51.5148V190.258L452.517 257.707M307.185 154.316H293.736M307.185 154.316L452.517 257.707M452.517 257.707L118.766 375.329L142.962 51.5148L176.424 228.609M176.424 228.609L199.076 338.778L151.713 429.384M176.424 228.609L40 174.554" stroke="#1F1F1F" stroke-width="26" />
-        <path d="M307.7 158.08L200.105 345.985" stroke="#1F1F1F" stroke-width="26" />
-        <circle cx="251.5" cy="244.5" r="215.5" stroke="#4E3963" stroke-width="4" />
-        <circle cx="262" cy="244" r="242.5" stroke="#60576A" stroke-width="3" />
+        <path d="M146.05 58.2073L307.185 154.316M307.185 154.316L365.358 51.5148V190.258L452.517 257.707M307.185 154.316H293.736M307.185 154.316L452.517 257.707M452.517 257.707L118.766 375.329L142.962 51.5148L176.424 228.609M176.424 228.609L199.076 338.778L151.713 429.384M176.424 228.609L40 174.554" stroke="#1F1F1F" strokeWidth="26" />
+        <path d="M307.7 158.08L200.105 345.985" stroke="#1F1F1F" strokeWidth="26" />
+        <circle cx="251.5" cy="244.5" r="215.5" stroke="#4E3963" strokeWidth="4" />
+        <circle cx="262" cy="244" r="242.5" stroke="#60576A" strokeWidth="3" />
         <g filter="url(#filter0_i_40_687)">
-            <circle cx="244" cy="252" r="243" stroke="#A584C5" stroke-width="2" />
+            <circle cx="244" cy="252" r="243" stroke="#A584C5" strokeWidth="2" />
         </g>
         <circle cx="467" cy="251" r="10" fill="#4E3963" />
         <defs>
-            <filter id="filter0_i_40_687" x="0" y="8" width="488" height="492" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <filter id="filter0_i_40_687" x="0" y="8" width="488" height="492" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                 <feOffset dy="4" />
@@ -105,8 +105,8 @@ const Logo = () => (
                 <feBlend mode="normal" in2="shape" result="effect1_innerShadow_40_687" />
             </filter>
             <linearGradient id="paint0_linear_40_687" x1="380.803" y1="161.684" x2="88.3919" y2="427.324" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#2D1744" />
-                <stop offset="1" stop-color="#AEA1BB" />
+                <stop stopColor="#2D1744" />
+                <stop offset="1" stopColor="#AEA1BB" />
             </linearGradient>
         </defs>
     </svg>

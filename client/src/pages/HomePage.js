@@ -11,12 +11,13 @@ const HomePage = () => {
       <HomeNavBar />
       <div className='home-content'>
         <h1 className='home-title'>VolleyViz</h1>
+        <h2 className='home-subtitle'>A Statistical Simulator</h2>
         <Logo className='home-logo' />
         <Link to="/team-selection">
           <button className='start-button'>START</button>
         </Link>
       </div>
-      <div className='home-background'>
+      <div className='outline-shape'>
         <HomeBackground />
       </div>
     </div>

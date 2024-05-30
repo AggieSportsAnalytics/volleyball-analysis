@@ -1,0 +1,72 @@
+.selection-container{
+    background-color: #2c2b2b;
+    width: 100%;
+    height: 100%;
+
+    h1{
+        font-size: 3rem;
+        color: #ca9df8;
+        font-family: Wallpoet;
+        padding-left: 2rem;
+        padding-top: 2rem; 
+
+    }
+
+    h2{
+        font-size: 2rem;
+        color: #ca9df8;
+        font-family: Chakra Petch;
+        padding-bottom: 0.5rem;
+    }
+
+    .dropdown-container{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding-left: 10rem;
+        padding-top: 2rem;
+
+        select{
+            width:50%;
+            margin-bottom: 1rem;
+            border-radius: 10px; /* Add rounded corners */
+            background-color: #d8d3de; /* Change background color to white */
+            font-family: Chakra Petch; /* Change font family */
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+    }
+
+    .menu-container{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 75%;
+    }
+
+    select{
+        width: 15%;
+        margin-bottom: 1rem;
+    }
+
+    .dashboard-button {
+        font-size: 1.5rem; 
+        font-family: Wallpoet;
+        color: #1f1f1f;
+        padding: 15px 15px;
+        border: none;
+        border-radius: 25px;
+        background-color: #d8d3de;
+        cursor: pointer;
+
+        margin-top: 10rem;
+        margin-left: 30rem;
+        transition: background-color 0.3s ease;
+      }
+      
+      .dashboard-button:hover {
+        background-color: #b48be6;
+      }
+}
+ 

@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
-function DropdownMenu({onSelect}){
+function DropdownMenu({onSelect, teamNo}){
     const [yearDropdown, setYearDropdown] = useState('');
     const [showTeamDropdown, setShowTeamDropdown] = useState(false);
     const [teamDropdown, setTeamDropdown] = useState('');
@@ -28,8 +28,8 @@ function DropdownMenu({onSelect}){
     }, [yearDropdown]);
 
     return (
-        <>
-            <h1>Select year</h1>
+        <div className='dropdown-container'>
+            <h2>Select year for team {teamNo}</h2>
             <select value={yearDropdown} onChange={handleYearDropdown}>
                 <option value="" disabled></option>
                 <option value="2016">2016</option>
@@ -41,7 +41,7 @@ function DropdownMenu({onSelect}){
             <div className="teams-dropdown">
                 {showTeamDropdown && (
                     <div className="teams-dropdown">
-                    <h2>Select school</h2>
+                    <h2>Select school for team {teamNo}</h2>
                     <select value={teamDropdown} onChange={handleTeamDropdown}>
                         <option value="" disabled>Select school</option>
                         {schools.map((school, index) => (
@@ -52,7 +52,7 @@ function DropdownMenu({onSelect}){
                 )}
             </div>
 
-        </>
+        </div>
     )
 }
 

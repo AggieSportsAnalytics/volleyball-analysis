@@ -8,7 +8,6 @@ function RankingPage(){
     return (
         <>
         <RankingDropdown />
-
         </>
     )
 }

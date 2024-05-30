@@ -1,7 +1,7 @@
 import React from 'react';
-import StatDashboardComponent from '../components/StatDashboard';
 import { useLocation, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import './StatDashboard.css'
 
 function StatDashboard(props){
     const { state } = useLocation();
@@ -27,59 +27,67 @@ function StatDashboard(props){
         .catch(error => {console.error('Error fetching graph:', error);});
     }, [yearA, teamA, yearB, teamB]);
 
+    const params = ['Ht', 'Jersey', 'Player', 'Kills', 'Errors', 'Total Attacks', 'Hit Pct', 'Assists', 'Aces',
+        'SErr', 'Digs', 'RErr', 'Block Solos', 'Block Assists', 'BErr', 'PTS',
+        'BHE'];
 
-    return (
-        <>
-            <StatDashboardComponent />
-            <h2>{teamA} ({yearA})</h2>
-            {Object.keys(data).length === 1 &&(
-                <table>
-                <thead>
-                    <tr>
-                        {Object.keys(rosterA[0]).map((key, index) => (
-                            <th key={index}>{key}</th>
-                        ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {rosterA.map((row, rowIndex) => (
-                        <tr key={rowIndex}>
-                            {Object.values(row).map((value, colIndex) => (
-                                <td key={colIndex}>{value}</td>
+
+
+        return (
+            <div className='dashboard-container'>
+                <div className='dashboard-dropdown-container'>
+                <h1>Dashboard</h1> 
+                <h2>{teamA} ({yearA})</h2>
+                {Object.keys(data).length === 1 && (
+                    <table className='dashboard-table'>
+                        <thead>
+                            <tr>
+                                {params.map((param, index) => (
+                                    <th key={index}>{param}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {rosterA.map((row, rowIndex) => (
+                                <tr key={rowIndex}>
+                                    {params.map((param, colIndex) => (
+                                        <td key={colIndex}>{row[param]}</td>
+                                    ))}
+                                </tr>
                             ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            )}
-            <h2>{teamB} ({yearB})</h2>
-            {Object.keys(data).length === 1 &&(
-                <table>
-                <thead>
-                    <tr>
-                        {Object.keys(rosterB[0]).map((key, index) => (
-                            <th key={index}>{key}</th>
-                        ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {rosterB.map((row, rowIndex) => (
-                        <tr key={rowIndex}>
-                            {Object.values(row).map((value, colIndex) => (
-                                <td key={colIndex}>{value}</td>
+                        </tbody>
+                    </table>
+                )}
+                <h2>{teamB} ({yearB})</h2>
+                {Object.keys(data).length === 1 && (
+                    <table className='dashboard-table'>
+                        <thead>
+                            <tr>
+                                {params.map((param, index) => (
+                                    <th key={index}>{param}</th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {rosterB.map((row, rowIndex) => (
+                                <tr key={rowIndex}>
+                                    {params.map((param, colIndex) => (
+                                        <td key={colIndex}>{row[param]}</td>
+                                    ))}
+                                </tr>
                             ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            )}
-            {Object.keys(data).length === 1 && (
-                <Link to="/matchup" state={ state }>
-                    <button>View Matchup</button>
-                </Link>
-            )}
-        </>
-    );
+                        </tbody>
+                    </table>
+                )}
+                {Object.keys(data).length === 1 && (
+                    <Link to="/matchup" state={state}>
+                        <button className='matchup-button'>View Matchup</button>
+                    </Link>
+                )}
+                </div>
+            </div>
+        );
+        
 
 };
 
