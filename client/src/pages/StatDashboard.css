@@ -79,9 +79,37 @@
     border-radius: 25px;
     background-color: #d8d3de;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, width 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    margin-left: -20px;
 }
 
 .matchup-button:hover {
     background-color: #b48be6;
+    width: 150px;
+}
+
+.button-text {
+    visibility: visible;
+}
+
+.view-matchup-text {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.matchup-button:hover .button-text {
+    visibility: hidden;
+}
+
+.matchup-button:hover .view-matchup-text {
+    visibility: visible;
 }

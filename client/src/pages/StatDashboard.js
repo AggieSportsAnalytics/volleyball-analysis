@@ -142,8 +142,12 @@ function StatDashboard(props) {
             </div>
                 {data.rosters && (
                     <Link className='link-dashboard' to="/matchup" state={state}>
-                        <button className='matchup-button'>→</button>
+                        <button className='matchup-button'>
+                            <span className='button-text'>→</span>
+                            <span className='view-matchup-text'> Matchup</span>
+                        </button>
                     </Link>
+                
                 )}
             </div>
         </div>

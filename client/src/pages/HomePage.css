@@ -82,12 +82,12 @@ html, body {
 
 .home-nav-bar {
     display: flex;
-    justify-content: center; /* Center the nav links horizontally */
+    justify-content: center;
     align-items: center;
-    padding: 20px; /* Adjust padding as needed */
+    padding: 20px;
     position: absolute;
     top: 20px;
-    width: 100%; /* Ensure the navbar spans the full width */
+    width: 100%;
 }
 
 .nav-link {

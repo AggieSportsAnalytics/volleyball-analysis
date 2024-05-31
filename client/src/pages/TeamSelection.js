@@ -3,6 +3,7 @@ import { useState } from 'react';
 import DropdownMenu from '../components/DropdownMenu';
 import {Link} from 'react-router-dom'
 import './TeamSelection.css'
+import HomeBackground from '../graphics/HomeBackground';
 
 const TeamSelection = (props) => {
   const [team1, setTeam1] = useState([])
@@ -20,8 +21,8 @@ const TeamSelection = (props) => {
         <div className='selection-container'>
           <h1>Team Selection</h1>
           <div className='menu-container'>
-            <DropdownMenu onSelect={handleSetTeam1} teamNo = {1}/>
-            <DropdownMenu onSelect={handleSetTeam2} teamNo = {2}/>
+            <DropdownMenu onSelect={handleSetTeam1} teamNo = {"home"}/>
+            <DropdownMenu onSelect={handleSetTeam2} teamNo = {"away"}/>
           </div>  
           {team1.length !== 0 && team2.length !== 0 && (
               <Link to="/stat-dashboard" state={{matchup: team1.concat(team2)}}>

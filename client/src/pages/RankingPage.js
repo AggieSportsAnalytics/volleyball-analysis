@@ -1,6 +1,7 @@
 import React from 'react';
 import RankingDropdown from '../components/RankingDropdown';
 import './RankingPage.css'
+import HomeBackground from '../graphics/HomeBackground';
 
 
 
