@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+        }
+
+        .team-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background-color: #1f1f1f;
+            color: #ca9df8;
+            text-align: center;
+            padding: 50px 0; /* Space for the header and bottom */
+        }
+
+        .team-header {
+            font-size: 6rem; /* Large font size for the header */
+            color: #ca9df8;
+            margin-bottom: 50px;
+            font-family: 'Wallpoet', sans-serif; /* Applying the Wallpoet font */
+        }
+
+        .member-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Wrap items to the next line if not enough space */
+            width: 100%;
+        }
+
+        .team-member {
+            flex: 0 1 calc(30% - 20px); /* Sets the basis for each box and allows three per row with space deduction for margin */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            padding: 20px;
+            background: #d8d3de;
+            color: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            height: 350px; /* Fixed height for uniformity */
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            color: #381054; /* Dark purple color */
+            font-weight: bold;
+        }
+
+        .member-desc {
+            font-size: 1rem;
+            color: #1f1f1f;
+        }
+    </style>
+</head>
+<body>
+    <div class="team-container">
+        <div class="team-header">Meet the Team</div>
+        <div class="member-row">
+            <div class="team-member">
+                <img src="path_to_image_member2.jpg" alt="Member 1">
+                <div class="member-name">Arnav Akula</div>
+                <div class="member-desc">Project Manager</div>
+            </div>
+            <div class="team-member">
+                <img src="path_to_image_member2.jpg" alt="Member 2">
+                <div class="member-name">Ruba Thekkath</div>
+                <div class="member-desc">Web Developer</div>
+            </div>
+            <div class="team-member">
+                <img src="path_to_image_member3.jpg" alt="Member 3">
+                <div class="member-name">Ankita Khatri</div>
+                <div class="member-desc">Data Analyst</div>
+            </div>
+        </div>
+        <div class="member-row">
+            <div class="team-member">
+                <img src="path_to_image_member4.jpg" alt="Member 4">
+                <div class="member-name">Nikhil Karthikeyan</div>
+                <div class="member-desc">Data Analyst</div>
+            </div>
+            <div class="team-member">
+                <img src="path_to_image_member5.jpg" alt="Member 5">
+                <div class="member-name">Lauren Lee</div>
+                <div class="member-desc">Business & Media</div>
+            </div>
+            <div class="team-member">
+                <img src="path_to_image_member6.jpg" alt="Member 6">
+                <div class="member-name">Akshay Raj</div>
+                <div the="member-desc">Business & Media</div>
+            </div>    
+        </div>
+</body>
+</html>
+
