@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #1f1f1f;
+    color: #ca9df8;
+    text-align: center;
+    padding: 50px 0; /* Space for the header and bottom */
+}
+
+.team-header {
+    font-size: 6rem; /* Large font size for the header */
+    color: #ca9df8;
+    margin-bottom: 50px;
+    font-family: 'Wallpoet', sans-serif; /* Applying the Wallpoet font */
+}
+
+.member-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap items to the next line if not enough space */
+    width: 100%;
+}
+
+.team-member {
+    position: relative; /* Enable positioning of child elements */
+    flex: 0 1 calc(30% - 40px); /* Sets the basis for each box and allows three per row with increased margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Increased margin for better spacing */
+    height: 300px; /* Reduced height for uniformity */
+    overflow: hidden; /* Ensure no overflow */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.team-member img {
+    width: 100%; /* Ensure the image takes up the full width */
+    height: 100%; /* Ensure the image takes up the full height */
+    object-fit: cover; /* Cover the entire area without distortion */
+    border-radius: 10px;
+}
+
+.member-info {
+    position: absolute; /* Position on top of the image */
+    bottom: 0; /* Align to the bottom */
+    background: rgba(0, 0, 0, 0.8); /* Increased opacity for better readability */
+    width: 100%; /* Full width */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Padding for better spacing */
+}
+
+.member-name {
+    font-size: 1.2rem;
+    color: #ca9df8; /* Light color for contrast */
+    font-weight: bold;
+}
+
+.member-desc {
+    font-size: 1rem;
+    color: #ca9df8; /* Light color for contrast */
+}

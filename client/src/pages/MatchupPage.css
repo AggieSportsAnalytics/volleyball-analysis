@@ -190,8 +190,6 @@ body, html {
     }
 }
 
-.stat-box-internal{
-    /* border: 2px solid red; */
-
+.result-box-internal li{
+    padding: 0.5rem;
 }
-

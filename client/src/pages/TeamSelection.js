@@ -3,7 +3,6 @@ import { useState } from 'react';
 import DropdownMenu from '../components/DropdownMenu';
 import {Link} from 'react-router-dom'
 import './TeamSelection.css'
-import HomeBackground from '../graphics/HomeBackground';
 
 const TeamSelection = (props) => {
   const [team1, setTeam1] = useState([])

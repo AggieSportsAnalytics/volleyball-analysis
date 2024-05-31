@@ -15,6 +15,8 @@ function MatchupPage(props) {
     const [winPrediction, setWinPrediction] = useState(-1);
     const [statPred, setStatPred] = useState({});
     const [pScore, setPScore] = useState('');
+    const [leastParam, setLeastParam] = useState('');
+    const [insightMessage, setInsightMessage] = useState('');
 
     useEffect(() => {
         fetch(`/get_win_prediction?year_a=${yearA}&team_a=${teamA}&year_b=${yearB}&team_b=${teamB}`)
@@ -33,20 +35,22 @@ function MatchupPage(props) {
             data['prediction']['Block Solos'] = (data['prediction']['Block Solos'] + data['prediction']['Kills'] - data['prediction']['Assists'])/4;
             data['prediction']['Digs'] = data['prediction']['Block Solos'] * 5;
             setStatPred(data['prediction']);
+
+            let key = Object.keys(data['prediction']).reduce((key, v) => data[v] < data[key] ? v : key);
+
+            setLeastParam(key);
+
+            if(key === 'Assists'){
+                setInsightMessage(['Prioritize offensive players that can set up attacks', 'Emphasize more agile players (defensive score is already relatively high)']);
+            }
         })
         .catch(error => { console.error('Error fetching data:', error); });
     }, [yearA, teamA, yearB, teamB]);
 
-    //fetch request to get predictions
-    //write to result variable in the format below
-
-
-    const temp = {'winner': ['UC Davis', 2018, 'home'], 'loser': ['UC Davis', 2019, 'away']}
-
     const boxes = [
         { id: 'winner', title: 'Predicted Result', content: 'Short description of Box 1', details: 'Detailed information about Box 1.' },
-        { id: 'offensive', title: 'Offensive + Defensive Insights', content: 'Short description of Box 2', details: 'Detailed information about Box 2.' },
-        { id: 'home-team', title: 'Personalized Advice', content: 'Short description of Box 3', details: 'Detailed information about Box 3.' },
+        { id: 'offensive', title: 'Forecasted Statline', content: 'Short description of Box 2', details: 'Detailed information about Box 2.' },
+        { id: 'home-team', title: 'Matchup Insights', content: 'Short description of Box 3', details: 'Detailed information about Box 3.' },
     ];
 
     const handleBoxClick = (boxId) => {
@@ -130,8 +134,33 @@ function MatchupPage(props) {
                                 )}
 
                                 {box.id === 'home-team' && (
-                                    <div className='winner-box'>
-                                        home-team
+                                    <div className='result-box'>
+                                        <div className='result-box-internal'>
+                                            <h4 className='big-team'>Assists</h4>
+                                            <h4>were by far the weakest category for </h4>
+                                            {winPrediction == 0 && (
+                                                <>
+                                                    <h4>{teamA} ({yearA})</h4>
+                                                 </>
+                                            )}
+                                            {winPrediction == 1 && (
+                                                <>
+                                                    <h4>{teamB} ({yearB})</h4>
+                                                </>
+                                            )}
+                                        </div>
+                                        <div className='vl' />
+                                        <div className='result-box-internal'>
+                                            <h4>Advice for next game:</h4>
+                                            <ul>
+                                                {insightMessage.map((key, index) => (
+                                                    <>
+                                                    <li>{key}</li>
+                                                    </>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        
                                     </div>
                                 )}
                             </>
