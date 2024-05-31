@@ -96,8 +96,29 @@ def get_discrete_var_prediction():
 
     
     return jsonify({'prediction': output})
+
+@app.route('/get_error_prediction')
+def get_error_prediction():
+    with open('data/team_stats.json', 'r') as f:
+        team_stats = json.load(f)
     
-        
+    with open('models/error-model.pkl', 'rb') as f:
+        model = pickle.load(f)
+
+    year_a = request.args.get('year_a')
+    team_a = request.args.get('team_a')
+    year_b = request.args.get('year_b')
+    team_b = request.args.get('team_b')
+
+    keys = list(team_stats[year_a][team_a].keys())
+
+    model_input = []
+
+    for key in keys:
+        model_input.append(team_stats[year_a][team_a][key])
+        model_input.append(team_stats[year_b][team_b][key])
+    
+    return jsonify({'win-prediction': str(model.predict([model_input])[0])})
 
 if __name__ == '__main__':
     app.run(debug=True, port=8001)
