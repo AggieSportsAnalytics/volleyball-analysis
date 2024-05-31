@@ -64,7 +64,23 @@ def get_win_prediction():
         model_input.append(team_stats[year_a][team_a][key])
         model_input.append(team_stats[year_b][team_b][key])
     
-    return jsonify({'win-prediction': str(win_predictor.predict([model_input])[0])})
+    pred = str(win_predictor.predict([model_input])[0])
+
+    score = 0
+
+    if pred == '1':
+        for key in keys:
+            score += abs((float(team_stats[year_a][team_a][key]) - float(team_stats[year_b][team_b][key])))
+
+            if float(team_stats[year_a][team_a][key]) != 0:
+                score /= float(team_stats[year_a][team_a][key])
+            else:
+                score /= 10
+    
+    score /= len(keys)
+
+    
+    return jsonify({'win-prediction': pred, 'score': str(round(100*score, 1))})
 
 @app.route('/get_discrete_var_prediction')
 def get_discrete_var_prediction():
