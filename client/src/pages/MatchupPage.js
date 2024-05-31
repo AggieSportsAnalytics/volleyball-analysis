@@ -13,12 +13,22 @@ function MatchupPage(props) {
     const teamB = state['matchup'][3];
 
     const [winPrediction, setWinPrediction] = useState(-1);
+    const [statPred, setStatPred] = useState('');
 
     useEffect(() => {
         fetch(`/get_win_prediction?year_a=${yearA}&team_a=${teamA}&year_b=${yearB}&team_b=${teamB}`)
         .then(response => response.json())
         .then(data => {
             setWinPrediction(data['win-prediction'])
+        })
+        .catch(error => { console.error('Error fetching data:', error); });
+    }, [yearA, teamA, yearB, teamB]);
+    
+    useEffect(() => {
+        fetch(`/get_discrete_var_prediction?year_a=${yearA}&team_a=${teamA}&year_b=${yearB}&team_b=${teamB}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
         })
         .catch(error => { console.error('Error fetching data:', error); });
     }, [yearA, teamA, yearB, teamB]);
