@@ -6,19 +6,20 @@ VolleyViz is a volleyball performance analysis system that leverages NCAA colleg
 
 ## Table of Contents
 
-- [Features](#features)
-- [Navigation](#navigation)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
+- [Features](#🌟-features)
+- [Navigation](#🗺️-navigation)
+- [Technologies](#💻-technologies)
+- [Contributing](#🤝-contributing)
+- [Areas of Improvement](#🎯-areas-of-improvement)
 
-# Features
+## 🌟 Features
 
 - **Game Simulation**: Use machine learning models to simulate volleyball games based on NCAA stats.
 - **Interactive Dashboard**: Explore team and player statistics in a visually engaging way.
 - **Matchup Visualization**: Visualize potential matchups and see how teams are forecasted to perform against each other.
 - **User-Friendly Interface**: Designed for both fans and coaches with easy-to-navigate features.
 
-## Navigation
+## 🗺️ Navigation
 
 VolleyViz consists of several key pages to help you engage with and analyze volleyball stats:
 
@@ -52,14 +53,14 @@ d. **Offensive and Defensive Advice**: Offers strategic advice for the losing te
    
    ![Offensive and Defensive Advice Screenshot](images/matchup_3.png)
 
-## Technologies
+## 💻 Technologies
 
 - **Frontend**: React.js
 - **Backend**: Flask
 - **Data Processing**: Pandas
-- **Machine Learning**: scikit-learn, Keras
+- **Machine Learning**: Scikit-learn, Keras
 
-## Contributing
+## 🤝 Contributing
 
 Below are the key roles and team members involved in this project:  
 
@@ -68,7 +69,7 @@ Below are the key roles and team members involved in this project:
 - **Media Member(s)**: Lauren Lee 
 - **Business Member(s)**: Akshay Raj
 
-## Areas of Improvement
+## 🎯 Areas of Improvement
 
 1. **Tailoring to UC Davis Volleyball Teams**: Customizing the application specifically for UC Davis volleyball teams to enable coaches to use it as a training tool.
 
